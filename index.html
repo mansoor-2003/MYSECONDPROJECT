@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BLAKISH</title>
+
+    <link rel="icon" type="img/png" href="https://img.freepik.com/premium-vector/launched-open-book-simple-drawing_786748-7891.jpg">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton+SC&display=swap" rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+    <style>
+        *{
+            font-family: "Playwrite CU" ,cursive;
+        }
+        h1{
+            font-family: "Lora", serif;
+        }
+        .foot{
+          display: flex;
+          align-items: center;
+          justify-content: space-evenly;
+          padding-top: 20px;
+          margin-left: 120px;
+          margin-top: 20px;
+        }
+        .pic{
+          align-items: center;
+           /* justify-content: center; */
+          padding-left: 40%;
+          padding-top: 30px;
+        }
+        /* #whats{
+        padding-bottom: 70px;
+        } */
+        .lastfoot{
+          text-align: center;
+          padding-top: 10px;
+          margin-top: 10px;
+        }
+
+
+
+        .container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    border-radius: 3px;
+    /* border: 1px solid gray; */
+    /* background: linear-gradient(to right, #6d6d6d3b, #1e1e1e); */
+    /* box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; */
+  }
+  
+  .container form .descr {
+    font-size: 20px;
+    font-weight: 500;
+    color: #e8e8e8;
+    margin-bottom: 25px;
+    margin-top: 25px;
+    text-align: center;
+  }
+  
+  .form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .input, textarea {
+    margin: 1em 0 1em 0;
+    width: 300px;
+    position: relative;
+  }
+  
+  .input input, textarea {
+    font-size: 100%;
+    padding: 0.7em;
+    outline: none;
+    color: #e8e8e8;
+    border: none;
+    border-bottom: 2px solid #e8e8e8;
+    background: transparent;
+    border-radius: none;
+    width: 100%;
+    resize: none;
+  }
+  
+  .input label {
+    font-size: 100%;
+    position: absolute;
+    left: 0;
+    color: #e8e8e8;
+    padding: 0.7em;
+    margin-left: 0.1em;
+    pointer-events: none;
+    transition: all 0.5s ease;
+    text-transform: uppercase;
+  }
+  
+  .input :is(input:focus, input:valid)~label {
+    transform: translateY(-50%) scale(.9);
+    margin: 0em;
+    padding: 0.4em;
+    background: transparent;
+  }
+  
+  .input textarea:focus ~ label,
+  .input textarea:valid ~ label {
+    transform: translateY(-50%) scale(.9);
+    margin: 0em;
+    padding: 0.4em;
+    background: transparent;
+  }
+  
+  .inputGroup :is(input:focus, input:valid) {
+    border-color: rgb(37, 37, 211);
+  }
+  
+  .form button {
+    color: #e8e8e8;
+    font-size: 15px;
+    align-self: flex-start;
+    padding: 0.6em;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 50px;
+    background: transparent;
+    transition: all 0.3s ease-in-out;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .form button:before {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #e8e8e8;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+  }
+  
+  .form button:hover:before {
+    opacity: 0.2;
+  }
+  
+  .form button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  }
+    </style>
+
+</head>
+<body class="bg-secondary">
+    <nav class="navbar navbar-expand-lg bg-secondary">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#"><i class="fa-solid fa-soap"></i> Ferno Decrapio</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Dropdown
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-secondary bg-light shadow" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+      <div class="row bg-dark text-light text-center p-3">
+        <div class="col-3">New Items</div>
+        <div class="col-3">Branded</div>
+        <div class="col-3">Replacement</div>
+        <div class="col-3">Help</div>
+      </div>
+      <!-- <div class="row">
+        <img style="width: 100%;" src="https://img.freepik.com/premium-photo/modern-living-room-interior-with-sofa-green-plants-lamp-table-dark-wall-background_41470-1528.jpg?w=1060" alt="">
+      </div> -->
+      <div id="carouselExampleCaptions" class="carousel slide">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img style="width: 100%; height: 600px;" src="https://img.freepik.com/premium-photo/modern-living-room-interior-with-sofa-green-plants-lamp-table-dark-wall-background_41470-1528.jpg?w=1060" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>First slide label</h5>
+              <p>Some representative placeholder content for the first slide.</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img style="width: 100%; height: 600px;" src="https://img.freepik.com/premium-photo/mockup-living-room-interior-with-sofa-empty-dark-blue-wall-background-3d-rendering_41470-4236.jpg?w=1060" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Second slide label</h5>
+              <p>Some representative placeholder content for the second slide.</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img style="width: 100%; height: 600px;" src="https://img.freepik.com/premium-photo/white-wall-living-room-have-sofa-decoration-3d-rendering_41470-3282.jpg?w=1060" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Third slide label</h5>
+              <p>Some representative placeholder content for the third slide.</p>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+
+      <div class="row bg-secondary text-light text-center">
+        <div class="col"><b>Top Picks For You</b></div>
+      </div>  
+      <div class="row bg-secondary text-light text-center">  
+        <div class="col">Impressive collection For Your Dream Home</div>
+      </div>
+
+        <div class="images d-flex justify-content-evenly p-5 bg-secondary">
+            <img src="https://img.freepik.com/free-photo/blue-armchair-against-blue-wall-living-room-interior-elegant-interior-design-with-copy-space-ai-generative_123827-23713.jpg?t=st=1720780834~exp=1720784434~hmac=ad84f5e9614ae9fd44f5c5d283d7266daa88faa80d9f5b0e2ff2f7c22c180709&w=1060" class="rounded-circle" width="150px" height="150px" alt="...">
+
+            <img src="https://img.freepik.com/premium-photo/memphis-style-conceptual-interior-room-3d-illustration_652609-855.jpg?w=360" class="rounded-circle" width="150px" height="150px" alt="...">
+
+            <img src="https://img.freepik.com/free-psd/retro-living-room-psd-interior_53876-109288.jpg?t=st=1720782683~exp=1720786283~hmac=b7f3e1cfcb531164b5cb4e5412d93b1f6df1c26eacfd895d51c457970d2d5f29&w=996" class="rounded-circle" width="150px" height="150px" alt="...">
+
+            <img src="https://img.freepik.com/premium-photo/minimalist-interior-modern-living-room-3d-rendering_652609-163.jpg?w=826" class="rounded-circle" width="150px" height="150px" alt="...">
+
+            <img src="https://img.freepik.com/premium-photo/white-color-attic-interior-room-3d-illustration_652609-219.jpg?w=360" class="rounded-circle" width="150px" height="150px" alt="...">
+
+            <img src="https://img.freepik.com/free-psd/interior-living-room-design_176382-1614.jpg?t=st=1720782798~exp=1720786398~hmac=cc2e92819fd1f1d981543ae99498cf8d8eaa10231afaa2f105dffe3d51f842e2&w=740" class="rounded-circle" width="150px" height="150px" alt="...">
+        </div>
+      </div>
+
+      <div class="row bg-secondary text-light text-center">
+        <div class="col"><b>Explore Essential Home Furniture</b></div>
+      </div>  
+      <div class="row bg-secondary text-light text-center">  
+        <div class="col">Impressive collection For Your Dream Home</div>
+      </div>
+
+      <div>
+        <div class="images d-flex justify-content-evenly p-5 bg-secondary">
+          <div>
+            <img src="https://img.freepik.com/free-photo/blue-armchair-against-blue-wall-living-room-interior-elegant-interior-design-with-copy-space-ai-generative_123827-23713.jpg?t=st=1720780834~exp=1720784434~hmac=ad84f5e9614ae9fd44f5c5d283d7266daa88faa80d9f5b0e2ff2f7c22c180709&w=1060" class="rounded" width="150px" height="150px" alt="...">
+            <p style="color: bisque;"><b>Sofa Sets</b></p>
+            <p style="color: aliceblue; margin-top: -20px;">From Rs 20,199</p>
+          </div>
+
+          <div>
+            <img src="https://img.freepik.com/premium-photo/memphis-style-conceptual-interior-room-3d-illustration_652609-855.jpg?w=360" class="rounded" width="150px" height="150px" alt="...">
+            <p style="color: bisque;"><b>Seating and Chair</b></p>
+            <p style="color: aliceblue; margin-top: -20px;">From Rs 1,899</p>
+          </div>
+
+          <div>
+            <img src="https://img.freepik.com/free-psd/retro-living-room-psd-interior_53876-109288.jpg?t=st=1720782683~exp=1720786283~hmac=b7f3e1cfcb531164b5cb4e5412d93b1f6df1c26eacfd895d51c457970d2d5f29&w=996" class="rounded" width="150px" height="150px" alt="...">
+            <p style="color: bisque;"><b>6 Seater Table Sets</b></p>
+            <p style="color: aliceblue; margin-top: -20px;">From Rs 32,479</p>
+          </div>
+
+          <div>
+            <img src="https://img.freepik.com/premium-photo/minimalist-interior-modern-living-room-3d-rendering_652609-163.jpg?w=826" class="rounded" width="150px" height="150px" alt="...">
+            <p style="color: bisque;"><b>Sofa Sets</b></p>
+            <p style="color: aliceblue; margin-top: -20px;">From Rs 25,199</p>
+          </div>
+
+          <div>
+            <img src="https://img.freepik.com/premium-photo/white-color-attic-interior-room-3d-illustration_652609-219.jpg?w=360" class="rounded" width="150px" height="150px" alt="...">
+            <p style="color: bisque;"><b>Dining Sets</b></p>
+            <p style="color: aliceblue; margin-top: -20px;">From Rs 15,189</p>
+          </div>
+
+          <div>
+            <img src="https://img.freepik.com/free-psd/interior-living-room-design_176382-1614.jpg?t=st=1720782798~exp=1720786398~hmac=cc2e92819fd1f1d981543ae99498cf8d8eaa10231afaa2f105dffe3d51f842e2&w=740" class="rounded" width="150px" height="150px" alt="...">
+            <p style="color: bisque;"><b>Seating</b></p>
+            <p style="color: aliceblue; margin-top: -20px;">From Rs 20,199</p>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="row bg-secondary text-light text-center">
+        <div class="col"><b>Their Words, Our Pride</b></div>
+      </div>  
+      <div class="row bg-secondary text-light text-center">  
+        <div class="col">Happy Words of our Happy Customer</div>
+      </div>
+
+      <div id="carouselExample" class="carousel slide bg-secondary">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+           <div class="row  justify-content-evenly">
+            <div class="col-4 text-light p-3"><img src="https://img.freepik.com/premium-photo/minimalist-interior-modern-living-room-3d-rendering_652609-163.jpg?w=826" width="100%" height="250px" alt="...">
+            <p style="text-align: justify;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt fugit ut vero corporis dignissimos excepturi eligendi totam est, cumque doloribus officia possimus temporibus earum. Consectetur autem dolor tenetur reprehenderit doloremque.</p>
+            <p style="text-align: center; color: bisque;">Mr. Kaushik Dutta</p>
+            <p style="text-align: center; margin-top: -15px; color: black;">Bangalore</p></div>
+          
+
+            <div class="col-4 text-light p-3"><img src="https://img.freepik.com/free-psd/retro-living-room-psd-interior_53876-109288.jpg?t=st=1720782683~exp=1720786283~hmac=b7f3e1cfcb531164b5cb4e5412d93b1f6df1c26eacfd895d51c457970d2d5f29&w=996"  width="100%" height="250px" alt="...">
+              <p style="text-align: justify;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt fugit ut vero corporis dignissimos excepturi eligendi totam est, cumque doloribus officia possimus temporibus earum. Consectetur autem dolor tenetur reprehenderit doloremque.</p>
+              <p style="text-align: center; color: bisque;">Ms. Ganga Pandi</p>
+              <p style="text-align: center; margin-top: -15px; color: black;">Delhi</p></div>
+
+            <div class="col-4 text-light p-3"><img src="https://img.freepik.com/premium-photo/memphis-style-conceptual-interior-room-3d-illustration_652609-855.jpg?w=360"  width="100%" height="250px" alt="...">
+              <p style="text-align: justify;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt fugit ut vero corporis dignissimos excepturi eligendi totam est, cumque doloribus officia possimus temporibus earum. Consectetur autem dolor tenetur reprehenderit doloremque.</p>
+              <p style="text-align: center; color: bisque;">Mr. Sharian Mukherji</p>
+              <p style="text-align: center; margin-top: -15px; color: black;">Kolkata</p>
+            </div>
+
+           </div>  
+          </div>
+          <div class="carousel-item">
+            <div class="row">
+                <div class="col-4 text-light p-3"><img src="https://img.freepik.com/premium-photo/minimalist-interior-modern-living-room-3d-rendering_652609-163.jpg?w=826" width="100%" height="250px" alt="...">
+                  <p style="text-align: justify;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt fugit ut vero corporis dignissimos excepturi eligendi totam est, cumque doloribus officia possimus temporibus earum. Consectetur autem dolor tenetur reprehenderit doloremque.</p>
+                  <p style="text-align: center; color: bisque;">Mr. Kaushik Dutta</p>
+                  <p style="text-align: center; margin-top: -15px; color: black;">Bangalore</p>
+                </div>
+
+                <div class="col-4 text-light p-3"><img src="https://img.freepik.com/free-photo/blue-armchair-against-blue-wall-living-room-interior-elegant-interior-design-with-copy-space-ai-generative_123827-23713.jpg?t=st=1720780834~exp=1720784434~hmac=ad84f5e9614ae9fd44f5c5d283d7266daa88faa80d9f5b0e2ff2f7c22c180709&w=1060"  width="100%" height="250px" alt="...">
+                  <p style="text-align: justify;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt fugit ut vero corporis dignissimos excepturi eligendi totam est, cumque doloribus officia possimus temporibus earum. Consectetur autem dolor tenetur reprehenderit doloremque.</p>
+                  <p style="text-align: center; color: bisque;">Mr. Kaushik Dutta</p>
+                  <p style="text-align: center; margin-top: -15px; color: black;">Bangalore</p>
+                </div>
+
+                <div class="col-4 text-light p-3"><img src="https://img.freepik.com/premium-photo/minimalist-interior-modern-living-room-3d-rendering_652609-163.jpg?w=826"  width="100%" height="250px" alt="...">
+                  <p style="text-align: justify;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt fugit ut vero corporis dignissimos excepturi eligendi totam est, cumque doloribus officia possimus temporibus earum. Consectetur autem dolor tenetur reprehenderit doloremque.</p>
+                  <p style="text-align: center; color: bisque;">Mr. Kaushik Dutta</p>
+                  <p style="text-align: center; margin-top: -15px; color: black;">Bangalore</p>
+                </div>
+
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="row">
+                <div class="col-4"><img src="https://img.freepik.com/premium-photo/minimalist-interior-modern-living-room-3d-rendering_652609-163.jpg?w=826" width="100%" height="250px" alt="..."></div>
+                <div class="col-4"><img src="https://img.freepik.com/premium-photo/minimalist-interior-modern-living-room-3d-rendering_652609-163.jpg?w=826"  width="100%"" height="250px" alt="..."></div>
+                <div class="col-4"><img src="https://img.freepik.com/premium-photo/minimalist-interior-modern-living-room-3d-rendering_652609-163.jpg?w=826"  width="100%"" height="250px" alt="..."></div>
+            </div>
+          </div>
+        </div>
+
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+
+      <div>
+        <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="https://img.freepik.com/premium-photo/yellow-chair-blue-backdrop-title-text-build-your-future-with-us-yellow-studio-background_444225-827.jpg?w=1060" height="500px" width="100%" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="https://img.freepik.com/premium-photo/augmented-reality-furniture-interior-design-industry_23-2151335329.jpg?w=1060" width="100%" height="500px" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="https://img.freepik.com/premium-photo/augmented-reality-furniture-interior-design-industry_23-2151335342.jpg?w=1060" width="100%" height="500px" class="d-block w-100" alt="...">
+              </div>
+            </div>
+           </div>
+        </div>
+
+        <div class="container bg-secondary" style="width: 100%;">
+          <form class="form">
+            <div class="descr">Contact us</div>
+            <div class="input">
+                <input required="" autocomplete="off" type="text">
+                <label for="name">Name</label>
+            </div>
+      
+            <div class="input">
+                <input required="" autocomplete="off" name="email" type="text">
+                <label for="email">E-mail</label>
+            </div>
+      
+            <div class="input">
+                <textarea required="" cols="30" rows="1" id="message"></textarea>
+                <label for="message">Message</label>
+            </div>
+            <button>Send message →</button>
+          </form>
+        </div>
+
+        <footer class="bg-secondary p-5">
+          <div class="foot">
+              <div class="foot1">
+                  <ul style="list-style: none;">
+                      <li style="color: brown;">Company</li>
+                      <li>About Us</li>
+                      <li>Career</li>
+                      <li>Blog</li>
+                      <li>Contact Us</li>
+                  </ul>
+              </div>
+              <div class="foot1">
+                  <ul style="list-style: none;">
+                      <li style="color: brown;">Policies</li>
+                      <li>Privacy Policies</li>
+                      <li>Terms of Use</li>
+                      <li>Secure Shopping</li>
+                      <li>Copyright Policy</li>
+                  </ul>
+              </div>
+              <div class="foot1">
+                  <ul style="list-style: none;">
+                      <li style="color: brown;">Help</li>
+                      <li>Payment</li>
+                      <li>Shipping</li>
+                      <li>Return</li>
+                      <li>FAQ</li>
+                  </ul>
+              </div>
+              <div class="foot1">
+                  <ul style="list-style: none;">
+                      <li style="color: brown;">Misc</li>
+                      <li>Affiliate</li>
+                      <li>Sitemap</li>
+                      
+                  </ul>
+              </div>
+          </div>
+          <div class="lastfoot text-light">
+              <p>Copyright@2024.Ferno.com.All Rights Reserved</p>
+          </div>
+      </footer>
+    
+</body>
+</html>
